@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HCorp</title>
+<meta name="description" content="HCorp">
+<meta name="theme-color" content="#F6F8FB">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Michroma&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F8FB;
+  --ink:#101826;
+  --blue:#2AA6FF;
+  --blue-soft:#BFE3FF;
+  --mute:#7C8798;
+  --wordmark:"Michroma","Arial",system-ui,sans-serif;
+  --body:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-weight:300;
+  -webkit-font-smoothing:antialiased;
+  overflow:hidden;
+}
+:focus-visible{outline:2px solid var(--blue);outline-offset:6px}
+
+/* fond */
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.grid{
+  position:absolute;inset:0;
+  background-image:radial-gradient(rgba(16,24,38,.16) 1px,transparent 1.6px);
+  background-size:30px 30px;
+  -webkit-mask-image:radial-gradient(circle at 50% 50%,#000 0,transparent 68%);
+          mask-image:radial-gradient(circle at 50% 50%,#000 0,transparent 68%);
+  opacity:0;animation:fadein 2s ease .4s forwards;
+}
+.glow{
+  position:absolute;left:50%;top:50%;width:80vmin;height:80vmin;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(circle,rgba(42,166,255,.20),rgba(42,166,255,0) 62%);
+  animation:breathe 7s ease-in-out infinite;
+}
+@keyframes breathe{50%{transform:translate(-50%,-50%) scale(1.14);opacity:.7}}
+.rings{position:absolute;left:50%;top:50%;width:0;height:0}
+.rings i{
+  position:absolute;left:0;top:0;
+  width:34vmin;height:34vmin;margin:-17vmin 0 0 -17vmin;
+  border:1px solid rgba(42,166,255,.42);border-radius:50%;
+  opacity:0;
+  animation:ring 10s cubic-bezier(.2,.6,.3,1) infinite;
+  animation-delay:calc(2.4s + var(--d) * 2s);
+}
+@keyframes ring{
+  0%{transform:scale(.45);opacity:0}
+  12%{opacity:.55}
+  100%{transform:scale(3.6);opacity:0}
+}
+@keyframes fadein{to{opacity:1}}
+
+/* cadre HUD */
+.frame{position:fixed;inset:clamp(14px,3vw,34px);z-index:1;pointer-events:none}
+.frame b{
+  position:absolute;width:22px;height:22px;
+  border:0 solid rgba(16,24,38,.35);
+  opacity:0;animation:fadein 1.2s ease 2.6s forwards;
+}
+.frame b:nth-child(1){left:0;top:0;border-width:1px 0 0 1px}
+.frame b:nth-child(2){right:0;top:0;border-width:1px 1px 0 0}
+.frame b:nth-child(3){left:0;bottom:0;border-width:0 0 1px 1px}
+.frame b:nth-child(4){right:0;bottom:0;border-width:0 1px 1px 0}
+
+/* scène */
+.stage{
+  position:relative;z-index:2;height:100svh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:clamp(22px,4.4vh,44px);
+  padding:24px;
+}
+.mark{
+  width:clamp(170px,26vmin,270px);height:auto;display:block;
+  transform:translate3d(calc(var(--mx,0) * 14px),calc(var(--my,0) * 14px),0);
+  transition:transform .25s ease-out;
+  overflow:visible;
+}
+.mark .ln{
+  fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;
+  stroke-dasharray:1;stroke-dashoffset:1;
+  animation:draw var(--t,1.2s) cubic-bezier(.5,0,.2,1) var(--s,0s) forwards;
+}
+.mark .ln.blue{stroke:var(--blue)}
+.mark .ln.thin{stroke-width:1;opacity:.6}
+@keyframes draw{to{stroke-dashoffset:0}}
+.mark .halo{
+  fill:none;stroke:var(--blue-soft);stroke-width:1;stroke-dasharray:2 6;
+  transform-origin:100px 100px;
+  opacity:0;
+  animation:fadein 1.4s ease 1.8s forwards,spin 40s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.mark .led{
+  fill:var(--blue);
+  transform-origin:140px 30.7px;
+  opacity:0;
+  animation:ledon .6s ease 2.1s forwards,ledpulse 2.4s ease-in-out 2.7s infinite;
+  filter:drop-shadow(0 0 5px rgba(42,166,255,.9));
+}
+@keyframes ledon{to{opacity:1}}
+@keyframes ledpulse{50%{transform:scale(1.55);opacity:.65}}
+
+.word{
+  font-family:var(--wordmark);font-weight:400;
+  font-size:clamp(22px,4.6vw,44px);
+  letter-spacing:.42em;margin-right:-.42em; /* recentre malgré l'espacement */
+  display:flex;
+}
+.word span{
+  display:inline-block;opacity:0;filter:blur(8px);transform:translateY(8px);
+  animation:focus .9s ease forwards;
+  animation-delay:calc(1.9s + var(--i) * .08s);
+}
+.word span:nth-child(2){color:var(--blue)}
+@keyframes focus{to{opacity:1;filter:blur(0);transform:none}}
+
+.rule{
+  width:clamp(120px,22vw,240px);height:1px;
+  background:linear-gradient(90deg,transparent,var(--ink),transparent);
+  transform:scaleX(0);animation:grow 1.4s cubic-bezier(.2,.9,.1,1) 2.5s forwards;
+  opacity:.5;
+}
+@keyframes grow{to{transform:scaleX(1)}}
+
+.foot{
+  position:fixed;left:0;right:0;bottom:clamp(30px,6vh,60px);z-index:2;
+  display:flex;justify-content:center;
+  opacity:0;animation:fadein 1.4s ease 3s forwards;
+}
+.foot a{
+  font-size:15px;letter-spacing:.14em;color:var(--mute);text-decoration:none;
+  padding:6px 2px;
+  background:linear-gradient(var(--blue),var(--blue)) 50% 100%/0 1px no-repeat;
+  transition:color .3s,background-size .5s cubic-bezier(.2,.9,.1,1);
+}
+.foot a:hover{color:var(--ink);background-size:100% 1px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .mark .ln{stroke-dashoffset:0}
+  .mark .halo,.mark .led,.grid,.frame b,.foot{opacity:1}
+  .word span{opacity:1;filter:none;transform:none}
+  .rule{transform:none}
+  .rings{display:none}
+}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <div class="grid"></div>
+  <div class="glow"></div>
+  <div class="rings"><i style="--d:0"></i><i style="--d:1"></i><i style="--d:2"></i><i style="--d:3"></i></div>
+</div>
+<div class="frame" aria-hidden="true"><b></b><b></b><b></b><b></b></div>
+
+<main class="stage" id="stage">
+  <svg class="mark" viewBox="0 0 200 200" aria-hidden="true">
+    <circle class="halo" cx="100" cy="100" r="94"/>
+    <!-- anneau ouvert -->
+    <path class="ln" pathLength="1" style="--t:1.8s;--s:.1s" d="M161.3 48.6 A80 80 0 1 1 113.9 21.2"/>
+    <!-- repères aux extrémités de l'ouverture -->
+    <line class="ln thin" pathLength="1" style="--t:.6s;--s:1.7s" x1="164" y1="44" x2="172" y2="39"/>
+    <line class="ln thin" pathLength="1" style="--t:.6s;--s:1.7s" x1="112" y1="17" x2="111" y2="8"/>
+    <!-- H -->
+    <line class="ln" pathLength="1" style="--t:1s;--s:.7s" x1="70" y1="66" x2="70" y2="134"/>
+    <line class="ln" pathLength="1" style="--t:1s;--s:.85s" x1="130" y1="66" x2="130" y2="134"/>
+    <line class="ln blue" pathLength="1" style="--t:.9s;--s:1.3s" x1="70" y1="100" x2="130" y2="100"/>
+    <!-- LED -->
+    <circle class="led" cx="140" cy="30.7" r="3.6"/>
+  </svg>
+
+  <h1 class="word" aria-label="HCorp">
+    <span style="--i:0">H</span><span style="--i:1">C</span><span style="--i:2">O</span><span style="--i:3">R</span><span style="--i:4">P</span>
+  </h1>
+  <div class="rule" aria-hidden="true"></div>
+</main>
+
+<div class="foot"><a href="mailto:contact@hcorp.si">contact@hcorp.si</a></div>
+
+<script>
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var stage = document.getElementById('stage');
+  var tx = 0, ty = 0, cx = 0, cy = 0;
+  window.addEventListener('pointermove', function(e){
+    tx = (e.clientX / window.innerWidth - .5) * 2;
+    ty = (e.clientY / window.innerHeight - .5) * 2;
+  }, {passive:true});
+  (function tick(){
+    cx += (tx - cx) * .06; cy += (ty - cy) * .06;
+    stage.style.setProperty('--mx', cx.toFixed(3));
+    stage.style.setProperty('--my', cy.toFixed(3));
+    requestAnimationFrame(tick);
+  })();
+})();
+</script>
+</body>
+</html>
