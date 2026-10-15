@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hugo Bertagna — Cybersécurité & Réseaux | HCorp</title>
-<meta name="description" content="Hugo Bertagna — élève ingénieur en cybersécurité et informatique à CPE Lyon, apprenti Client Solution Architect chez Orange Business. Réseaux, cloud, sécurité offensive, IA agentique.">
-<meta name="theme-color" content="#F6F8FB">
+<title>Hugo Bertagna — Cybersécurité & Réseaux</title>
+<meta name="description" content="Hugo Bertagna — élève ingénieur en cybersécurité et informatique à CPE Lyon, Client Solution Architect en alternance chez Orange Business. Réseaux, cloud, sécurité offensive, IA agentique.">
+<meta name="theme-color" content="#FCFBF9">
 <meta property="og:title" content="Hugo Bertagna — Cybersécurité & Réseaux">
 <meta property="og:description" content="Élève ingénieur cybersécurité (CPE Lyon) · Client Solution Architect en alternance chez Orange Business.">
 <meta property="og:type" content="website">
@@ -13,342 +13,263 @@
 <link rel="canonical" href="https://hcorp.si/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Michroma&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23101826' stroke-width='12' stroke-linecap='round'%3E%3Cpath d='M161.3 48.6A80 80 0 1 1 113.9 21.2'/%3E%3Cpath d='M70 66v68M130 66v68'/%3E%3C/g%3E%3Cpath d='M70 100h60' stroke='%232AA6FF' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' text-anchor='middle' fill='%2315161A'%3EH%3C/text%3E%3C/svg%3E">
 <style>
 :root{
-  --paper:#F6F8FB;
+  --paper:#FCFBF9;
   --surface:#FFFFFF;
-  --ink:#101826;
-  --ink-2:#36435A;
-  --mute:#7C8798;
-  --line:rgba(16,24,38,.12);
-  --line-strong:rgba(16,24,38,.22);
-  --blue:#2AA6FF;
-  --blue-ink:#0B74C4;
-  --blue-wash:rgba(42,166,255,.10);
-  --dot:rgba(16,24,38,.14);
-  --shadow:0 1px 2px rgba(16,24,38,.04),0 12px 32px -18px rgba(16,24,38,.35);
-  --wordmark:"Michroma","Arial Narrow",system-ui,sans-serif;
-  --body:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --rad:14px;
-  --maxw:1080px;
+  --ink:#15161A;
+  --ink-2:#4A4D55;
+  --mute:#8A8D94;
+  --line:rgba(21,22,26,.11);
+  --line-2:rgba(21,22,26,.20);
+  --accent:#2E5C8A;
+  --accent-soft:rgba(46,92,138,.09);
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --maxw:1020px;
 }
 :root[data-theme="dark"]{
-  --paper:#0A0E16;
-  --surface:#111826;
-  --ink:#EAF0F8;
-  --ink-2:#AFBCCE;
-  --mute:#7B8799;
-  --line:rgba(234,240,248,.12);
-  --line-strong:rgba(234,240,248,.24);
-  --blue:#4FB6FF;
-  --blue-ink:#8ACDFF;
-  --blue-wash:rgba(79,182,255,.12);
-  --dot:rgba(234,240,248,.14);
-  --shadow:0 1px 2px rgba(0,0,0,.4),0 18px 40px -22px rgba(0,0,0,.9);
+  --paper:#121316;
+  --surface:#191A1F;
+  --ink:#F2F1EE;
+  --ink-2:#B6B8BE;
+  --mute:#85888F;
+  --line:rgba(242,241,238,.13);
+  --line-2:rgba(242,241,238,.24);
+  --accent:#8FB4D8;
+  --accent-soft:rgba(143,180,216,.11);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --paper:#0A0E16;
-    --surface:#111826;
-    --ink:#EAF0F8;
-    --ink-2:#AFBCCE;
-    --mute:#7B8799;
-    --line:rgba(234,240,248,.12);
-    --line-strong:rgba(234,240,248,.24);
-    --blue:#4FB6FF;
-    --blue-ink:#8ACDFF;
-    --blue-wash:rgba(79,182,255,.12);
-    --dot:rgba(234,240,248,.14);
-    --shadow:0 1px 2px rgba(0,0,0,.4),0 18px 40px -22px rgba(0,0,0,.9);
+    --paper:#121316;
+    --surface:#191A1F;
+    --ink:#F2F1EE;
+    --ink-2:#B6B8BE;
+    --mute:#85888F;
+    --line:rgba(242,241,238,.13);
+    --line-2:rgba(242,241,238,.24);
+    --accent:#8FB4D8;
+    --accent-soft:rgba(143,180,216,.11);
   }
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:86px}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
 body{
   background:var(--paper);
   color:var(--ink);
-  font-family:var(--body);
+  font-family:var(--sans);
   font-weight:300;
-  font-size:17px;
-  line-height:1.6;
+  font-size:16.5px;
+  line-height:1.65;
   -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
+  text-rendering:optimizeLegibility;
 }
-::selection{background:var(--blue);color:#fff}
-:focus-visible{outline:2px solid var(--blue);outline-offset:4px;border-radius:4px}
+::selection{background:var(--ink);color:var(--paper)}
+:focus-visible{outline:1.5px solid var(--accent);outline-offset:4px;border-radius:2px}
 a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.005em;line-height:1.12}
 
-/* ───────── fond ───────── */
-.bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.bg .dots{
-  position:absolute;inset:-10%;
-  background-image:radial-gradient(var(--dot) 1px,transparent 1.6px);
-  background-size:30px 30px;
-  -webkit-mask-image:radial-gradient(circle at 50% 22%,#000 0,transparent 70%);
-          mask-image:radial-gradient(circle at 50% 22%,#000 0,transparent 70%);
-}
-.bg .glow{
-  position:absolute;left:50%;top:-10%;width:90vmin;height:90vmin;
-  transform:translateX(-50%);
-  background:radial-gradient(circle,var(--blue-wash),transparent 62%);
-  animation:breathe 9s ease-in-out infinite;
-}
-@keyframes breathe{50%{transform:translateX(-50%) scale(1.12)}}
+.wrap{width:min(100% - 48px,var(--maxw));margin-inline:auto}
+section{padding-block:clamp(56px,8vw,96px)}
+section + section{border-top:1px solid var(--line)}
 
-/* ───────── layout ───────── */
-.wrap{width:min(100% - 44px,var(--maxw));margin-inline:auto}
-main{position:relative;z-index:1}
-section{padding-block:clamp(64px,9vw,112px);scroll-margin-top:86px}
-.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:clamp(28px,4vw,44px)}
-.sec-head .idx{
-  font-family:var(--wordmark);font-size:11px;letter-spacing:.2em;color:var(--blue);
-  padding-top:4px;
+/* ── label de section ── */
+.label{
+  font-size:11.5px;font-weight:500;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--mute);margin-bottom:clamp(22px,3vw,34px);display:block;
 }
-.sec-head h2{
-  font-size:clamp(24px,3.4vw,34px);font-weight:400;letter-spacing:-.01em;
-}
-.sec-head .bar{flex:1;height:1px;background:var(--line);align-self:center}
 
-/* ───────── header ───────── */
+/* ── header ── */
 header{
-  position:sticky;top:0;z-index:50;
-  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  background:color-mix(in srgb,var(--paper) 78%,transparent);
-  border-bottom:1px solid transparent;
-  transition:border-color .3s,background .3s;
+  position:sticky;top:0;z-index:40;
+  background:color-mix(in srgb,var(--paper) 86%,transparent);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid transparent;transition:border-color .3s;
 }
 header.stuck{border-bottom-color:var(--line)}
-.nav{display:flex;align-items:center;gap:18px;height:68px}
-.brand{display:flex;align-items:center;gap:11px;margin-right:auto}
-.brand svg{width:26px;height:26px;overflow:visible}
-.brand .ring,.brand .post{fill:none;stroke:var(--ink);stroke-width:9;stroke-linecap:round}
-.brand .cross{fill:none;stroke:var(--blue);stroke-width:9;stroke-linecap:round}
-.brand .led{fill:var(--blue)}
-.brand b{font-family:var(--wordmark);font-weight:400;font-size:13px;letter-spacing:.3em}
-.brand b i{color:var(--blue);font-style:normal}
-.nav nav{display:flex;gap:4px}
+.nav{display:flex;align-items:center;gap:16px;height:72px}
+.name{
+  margin-right:auto;font-family:var(--serif);font-size:20px;letter-spacing:-.01em;
+  transition:color .2s;
+}
+.name:hover{color:var(--accent)}
+.nav nav{display:flex;gap:26px}
 .nav nav a{
-  font-size:14px;letter-spacing:.04em;color:var(--mute);
-  padding:7px 11px;border-radius:999px;
-  transition:color .2s,background .2s;
+  font-size:14.5px;color:var(--mute);position:relative;padding:4px 0;
+  transition:color .2s;
 }
-.nav nav a:hover,.nav nav a.active{color:var(--ink);background:var(--blue-wash)}
-.tools{display:flex;gap:6px;align-items:center;margin-left:4px}
-.icon-btn{
-  height:34px;min-width:34px;padding:0 10px;
-  display:grid;place-items:center;
-  border:1px solid var(--line);border-radius:999px;background:transparent;
-  color:var(--ink-2);font-family:var(--body);font-size:12px;font-weight:500;letter-spacing:.1em;
-  cursor:pointer;transition:border-color .2s,color .2s,background .2s;
+.nav nav a::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+  background:currentColor;transform:scaleX(0);transform-origin:left;
+  transition:transform .3s cubic-bezier(.2,.9,.1,1);
 }
-.icon-btn:hover{border-color:var(--line-strong);color:var(--ink);background:var(--blue-wash)}
-.icon-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.nav nav a:hover,.nav nav a.active{color:var(--ink)}
+.nav nav a.active::after,.nav nav a:hover::after{transform:scaleX(1)}
+.tools{display:flex;gap:8px;align-items:center;margin-left:10px}
+.tbtn{
+  height:32px;min-width:32px;padding:0 9px;display:grid;place-items:center;
+  border:1px solid var(--line);border-radius:3px;background:transparent;
+  color:var(--ink-2);font-family:var(--sans);font-size:11.5px;font-weight:500;letter-spacing:.1em;
+  cursor:pointer;transition:border-color .2s,color .2s;
+}
+.tbtn:hover{border-color:var(--line-2);color:var(--ink)}
+.tbtn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .burger{display:none}
 
-/* ───────── hero ───────── */
-.hero{padding-top:clamp(42px,7vw,78px);padding-bottom:clamp(56px,7vw,92px)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(28px,5vw,64px);align-items:center}
-.pill{
-  display:inline-flex;align-items:center;gap:9px;
-  border:1px solid var(--line);border-radius:999px;
-  padding:6px 14px 6px 10px;font-size:13px;color:var(--ink-2);letter-spacing:.02em;
-  background:var(--surface);
+/* ── hero ── */
+.hero{padding-top:clamp(56px,10vw,110px);padding-bottom:clamp(50px,8vw,92px)}
+.avail{
+  display:inline-flex;align-items:center;gap:9px;font-size:13.5px;color:var(--mute);
+  margin-bottom:26px;
 }
-.pill .dot{width:7px;height:7px;border-radius:50%;background:#2ECC71;box-shadow:0 0 0 0 rgba(46,204,113,.6);animation:ping 2.4s ease-out infinite}
-@keyframes ping{70%,100%{box-shadow:0 0 0 7px rgba(46,204,113,0)}}
-.hero h1{
-  margin:20px 0 0;
-  font-size:clamp(40px,7.4vw,74px);line-height:1.02;font-weight:400;letter-spacing:-.025em;
+.avail i{width:5px;height:5px;border-radius:50%;background:var(--accent);display:block}
+.hero h1{font-size:clamp(50px,9.5vw,96px);line-height:.98;letter-spacing:-.02em}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.lede{
+  margin-top:26px;font-size:clamp(17px,2.1vw,20px);line-height:1.55;
+  color:var(--ink-2);max-width:46ch;font-weight:300;
 }
-.hero h1 .last{color:var(--blue)}
-.hero .role{
-  margin-top:14px;font-size:clamp(17px,2.2vw,21px);color:var(--ink-2);max-width:40ch;
+.lede strong{font-weight:500;color:var(--ink)}
+.hero-foot{
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-top:36px;
 }
-.hero .role strong{font-weight:500;color:var(--ink)}
-.meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:14px;color:var(--mute)}
-.meta span{display:inline-flex;align-items:center;gap:7px}
-.meta svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px}
+.hero-foot .where{font-size:14.5px;color:var(--mute)}
+.link-u{
+  font-size:15px;color:var(--ink);border-bottom:1px solid var(--line-2);
+  padding-bottom:2px;transition:border-color .25s,color .25s;
+}
+.link-u:hover{color:var(--accent);border-color:var(--accent)}
 .btn{
-  display:inline-flex;align-items:center;gap:9px;
-  padding:12px 20px;border-radius:999px;font-size:15px;letter-spacing:.02em;
-  border:1px solid var(--line-strong);
-  transition:transform .2s cubic-bezier(.2,.9,.1,1),background .2s,border-color .2s,box-shadow .2s;
+  display:inline-flex;align-items:center;gap:9px;padding:11px 20px;
+  border:1px solid var(--ink);border-radius:3px;background:var(--ink);color:var(--paper);
+  font-size:14.5px;letter-spacing:.01em;
+  transition:background .25s,color .25s,border-color .25s;
 }
-.btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.btn:hover{transform:translateY(-2px)}
-.btn-primary{background:var(--ink);color:var(--paper);border-color:var(--ink);box-shadow:var(--shadow)}
-.btn-primary:hover{background:var(--blue);border-color:var(--blue);color:#fff}
-.btn-ghost:hover{background:var(--surface);border-color:var(--blue);color:var(--blue-ink)}
+.btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.btn:hover{background:transparent;color:var(--ink)}
 
-/* mark animé */
-.mark{width:clamp(150px,21vw,230px);height:auto;overflow:visible;justify-self:center}
-.mark .ln{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw var(--t,1.2s) cubic-bezier(.5,0,.2,1) var(--s,0s) forwards}
-.mark .ln.blue{stroke:var(--blue)}
-.mark .ln.thin{stroke-width:1;opacity:.55}
-@keyframes draw{to{stroke-dashoffset:0}}
-.mark .halo{fill:none;stroke:var(--blue);opacity:0;stroke-width:1;stroke-dasharray:2 7;transform-origin:100px 100px;animation:fadein 1.2s ease 1.5s forwards,spin 44s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes fadein{to{opacity:.55}}
-.mark .led{fill:var(--blue);transform-origin:140px 30.7px;opacity:0;animation:ledon .5s ease 1.8s forwards,ledpulse 2.6s ease-in-out 2.4s infinite;filter:drop-shadow(0 0 6px var(--blue))}
-@keyframes ledon{to{opacity:1}}
-@keyframes ledpulse{50%{transform:scale(1.5);opacity:.6}}
+/* ── chiffres ── */
+.figures{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,48px)}
+.figures div{border-top:1px solid var(--line);padding-top:16px}
+.figures b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.4vw,42px);line-height:1}
+.figures small{display:block;margin-top:7px;font-size:13.5px;color:var(--mute);line-height:1.45}
 
-/* ───────── stats ───────── */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden}
-.stats div{background:var(--paper);padding:20px 18px}
-.stats b{display:block;font-size:clamp(22px,3vw,30px);font-weight:400;letter-spacing:-.02em}
-.stats b em{font-style:normal;color:var(--blue)}
-.stats small{display:block;margin-top:2px;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
-
-/* ───────── à propos ───────── */
-.about{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(26px,4vw,56px)}
-.about p{color:var(--ink-2);max-width:62ch}
+/* ── à propos ── */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,5vw,64px)}
+.about p{color:var(--ink-2);max-width:58ch}
 .about p + p{margin-top:16px}
-.focus{border-left:2px solid var(--blue);padding-left:18px;align-self:start}
-.focus h3{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:500;margin-bottom:10px}
-.focus ul{list-style:none;display:grid;gap:7px;font-size:15.5px;color:var(--ink-2)}
-.focus li::before{content:"▸";color:var(--blue);margin-right:9px}
-
-/* ───────── timeline ───────── */
-.tl{position:relative;display:grid;gap:4px}
-.tl::before{content:"";position:absolute;left:7px;top:10px;bottom:10px;width:1px;background:var(--line)}
-.job{position:relative;padding:20px 0 20px 34px;border-radius:var(--rad);transition:background .25s}
-.job:hover{background:var(--surface)}
-.job::before{
-  content:"";position:absolute;left:0;top:27px;width:15px;height:15px;border-radius:50%;
-  background:var(--paper);border:1px solid var(--line-strong);transition:border-color .25s,background .25s;
+.doing{display:grid;gap:0;align-content:start}
+.doing div{
+  display:grid;grid-template-columns:18px 1fr;gap:12px;align-items:baseline;
+  padding:12px 0;border-bottom:1px solid var(--line);font-size:15.5px;color:var(--ink-2);
 }
-.job:hover::before{border-color:var(--blue)}
-.job.now::before{border-color:var(--blue);background:var(--blue);box-shadow:0 0 0 4px var(--blue-wash)}
-.job-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
-.job h3{font-size:19px;font-weight:500;letter-spacing:-.01em}
-.job .org{color:var(--blue-ink);font-size:16px}
-.job .when{margin-left:auto;font-size:13px;letter-spacing:.06em;color:var(--mute);white-space:nowrap}
-.job .where{font-size:13.5px;color:var(--mute);margin-top:2px}
-.job ul{list-style:none;margin-top:12px;display:grid;gap:7px;color:var(--ink-2);font-size:15.5px;max-width:74ch}
-.job li{position:relative;padding-left:17px}
-.job li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:1px;background:var(--blue)}
+.doing div:first-child{border-top:1px solid var(--line)}
+.doing span{font-size:11.5px;color:var(--mute);letter-spacing:.08em}
 
-/* ───────── projets ───────── */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.card{
-  position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--rad);
-  padding:24px 22px;display:flex;flex-direction:column;gap:11px;
-  transition:transform .3s cubic-bezier(.2,.9,.1,1),border-color .3s,box-shadow .3s;
+/* ── expérience ── */
+.job{
+  display:grid;grid-template-columns:168px 1fr;gap:8px clamp(20px,4vw,44px);
+  padding:28px 0;border-top:1px solid var(--line);
 }
-.card:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:var(--shadow)}
-.card .tag{
-  align-self:flex-start;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
-  padding:4px 10px;border-radius:999px;background:var(--blue-wash);color:var(--blue-ink);
+.job:last-child{border-bottom:1px solid var(--line)}
+.job .when{font-size:13.5px;color:var(--mute);letter-spacing:.02em;padding-top:5px}
+.job h3{font-size:23px}
+.job .org{font-size:15px;color:var(--accent);margin-top:4px}
+.job .org span{color:var(--mute)}
+.job ul{list-style:none;margin-top:14px;display:grid;gap:8px;color:var(--ink-2);font-size:15.5px;max-width:68ch}
+.job li{position:relative;padding-left:18px}
+.job li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:1px;background:var(--line-2)}
+
+/* ── projets ── */
+.projects{display:grid;gap:0}
+.proj{
+  display:grid;grid-template-columns:168px 1fr;gap:8px clamp(20px,4vw,44px);
+  padding:28px 0;border-top:1px solid var(--line);
 }
-.card .tag.gold{background:rgba(214,158,46,.14);color:#B07A10}
-:root[data-theme="dark"] .card .tag.gold{color:#E3B457}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .card .tag.gold{color:#E3B457}}
-.card h3{font-size:19px;font-weight:500;letter-spacing:-.01em}
-.card p{font-size:15.5px;color:var(--ink-2)}
-.card .stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
-.card .stack span{font-size:12.5px;letter-spacing:.04em;color:var(--mute);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
-.card .link{font-size:14px;color:var(--blue-ink);display:inline-flex;align-items:center;gap:6px}
-.card .link svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
-.card:hover .link svg{transform:translate(2px,-2px)}
-
-/* ───────── formation + skills ───────── */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4vw,52px)}
-.edu{display:grid;gap:14px}
-.edu article{border:1px solid var(--line);border-radius:var(--rad);padding:20px;background:var(--surface)}
-.edu h3{font-size:17.5px;font-weight:500}
-.edu .deg{font-size:15px;color:var(--blue-ink);margin-top:3px}
-.edu .when{font-size:13px;color:var(--mute);letter-spacing:.06em;margin-top:6px}
-.edu p{font-size:15px;color:var(--ink-2);margin-top:10px}
-
-.skills{display:grid;gap:20px;align-content:start}
-.skills h3{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:500;margin-bottom:10px}
-.chips{display:flex;flex-wrap:wrap;gap:7px}
-.chips span{
-  font-size:14px;padding:5px 12px;border-radius:999px;
-  border:1px solid var(--line);background:var(--surface);color:var(--ink-2);
-  transition:border-color .2s,color .2s;
+.proj:last-child{border-bottom:1px solid var(--line)}
+.proj .meta{font-size:13.5px;color:var(--mute);padding-top:5px}
+.proj .award{color:var(--ink);display:block}
+.proj h3{font-size:23px}
+.proj p{margin-top:10px;color:var(--ink-2);font-size:15.5px;max-width:66ch}
+.stack{display:flex;flex-wrap:wrap;gap:6px 8px;margin-top:14px}
+.stack span{
+  font-size:12.5px;color:var(--mute);border:1px solid var(--line);
+  border-radius:2px;padding:3px 9px;
 }
-.chips span:hover{border-color:var(--blue);color:var(--blue-ink)}
-.langs{display:grid;gap:9px}
-.lang{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;font-size:15px;color:var(--ink-2)}
-.lang .track{height:3px;border-radius:2px;background:var(--line)}
-.lang .fill{display:block;height:100%;border-radius:2px;background:var(--blue);width:var(--w);transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.9,.1,1)}
-.lang.in .fill{transform:scaleX(1)}
-.lang .lvl{font-size:12.5px;letter-spacing:.08em;color:var(--mute)}
-.certs{list-style:none;display:grid;gap:8px;font-size:15px;color:var(--ink-2)}
-.certs li{display:flex;gap:10px;align-items:flex-start}
-.certs svg{flex:none;margin-top:4px;width:15px;height:15px;fill:none;stroke:var(--blue);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
-/* ───────── contact ───────── */
-.contact{text-align:center;border-top:1px solid var(--line);margin-top:clamp(40px,6vw,72px)}
-.contact h2{font-size:clamp(28px,5vw,46px);font-weight:400;letter-spacing:-.025em}
-.contact p{color:var(--ink-2);margin-top:14px;max-width:48ch;margin-inline:auto}
-.contact .cta{justify-content:center;margin-top:28px}
+/* ── formation & compétences ── */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,64px)}
+.edu article{padding:22px 0;border-top:1px solid var(--line)}
+.edu article:last-child{border-bottom:1px solid var(--line)}
+.edu h3{font-size:21px}
+.edu .deg{font-size:15px;color:var(--accent);margin-top:4px}
+.edu .when{font-size:13.5px;color:var(--mute);margin-top:6px}
+.edu p{font-size:15px;color:var(--ink-2);margin-top:12px}
+.skills{display:grid;gap:26px;align-content:start}
+.skills h3{font-family:var(--sans);font-size:11.5px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--mute);margin-bottom:12px}
+.skills p{font-size:15.5px;color:var(--ink-2);line-height:1.8}
+.skills .sep{color:var(--line-2);padding:0 2px}
+.certs{list-style:none;display:grid;gap:9px;font-size:15.5px;color:var(--ink-2)}
+.certs li{padding-left:18px;position:relative}
+.certs li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:1px;background:var(--accent)}
+
+/* ── contact ── */
+.contact{text-align:center}
+.contact h2{font-size:clamp(34px,6vw,58px);letter-spacing:-.02em}
+.contact h2 em{font-style:italic;color:var(--accent)}
+.contact p{margin:18px auto 0;color:var(--ink-2);max-width:44ch}
+.contact .mail{
+  display:inline-block;margin-top:30px;font-family:var(--serif);
+  font-size:clamp(20px,3.2vw,30px);border-bottom:1px solid var(--line-2);padding-bottom:4px;
+  transition:color .25s,border-color .25s;
+}
+.contact .mail:hover{color:var(--accent);border-color:var(--accent)}
 footer{border-top:1px solid var(--line);padding-block:26px;font-size:13.5px;color:var(--mute)}
-.foot-row{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;justify-content:space-between}
-.foot-row a{transition:color .2s}
-.foot-row a:hover{color:var(--blue)}
-.foot-links{display:flex;gap:18px}
+.foot{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
+.foot a{transition:color .2s}
+.foot a:hover{color:var(--ink)}
+.foot-links{display:flex;gap:22px}
 
-/* ───────── reveal ───────── */
-.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.9,.1,1)}
+/* ── reveal ── */
+.rv{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.9,.1,1)}
 .rv.in{opacity:1;transform:none}
 
-@media (max-width:860px){
-  .hero-grid{grid-template-columns:1fr}
-  .mark{display:none}
+@media (max-width:820px){
   .about,.split{grid-template-columns:1fr}
-  .stats{grid-template-columns:1fr 1fr}
+  .figures{grid-template-columns:1fr;gap:0}
+  .figures div{padding-block:16px}
+  .job,.proj{grid-template-columns:1fr;gap:4px}
+  .job .when,.proj .meta{padding-top:0;order:-1}
   .nav nav{
-    position:fixed;inset:68px 0 auto;flex-direction:column;gap:0;
-    background:var(--paper);border-bottom:1px solid var(--line);
-    padding:10px 22px 18px;
+    position:fixed;inset:72px 0 auto;flex-direction:column;gap:0;
+    background:var(--paper);border-bottom:1px solid var(--line);padding:6px 24px 20px;
     transform:translateY(-130%);transition:transform .35s cubic-bezier(.2,.9,.1,1);
   }
   header.open nav{transform:none}
-  .nav nav a{padding:12px 4px;font-size:16px;border-radius:0}
+  .nav nav a{padding:13px 0;font-size:16px;border-bottom:1px solid var(--line)}
+  .nav nav a::after{display:none}
   .burger{display:grid}
-  .job .when{margin-left:0;width:100%}
-}
-@media (max-width:420px){
-  .stats{grid-template-columns:1fr}
 }
 @media print{
-  header,.bg,.cta,.contact .cta{display:none}
-  body{background:#fff;color:#000}
+  header,.avail,.btn,.contact .mail{display:none}
+  body{background:#fff;color:#000;font-size:11pt}
+  section{padding-block:12pt;border:0}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv{opacity:1;transform:none}
-  .mark .ln{stroke-dashoffset:0}
-  .mark .halo{opacity:.55}
-  .mark .led{opacity:1}
-  .lang .fill{transform:scaleX(1)}
 }
 </style>
 </head>
 <body>
 
-<div class="bg" aria-hidden="true"><div class="dots"></div><div class="glow"></div></div>
-
 <header id="hdr">
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="HCorp — accueil">
-      <svg viewBox="0 0 200 200" aria-hidden="true">
-        <path class="ring" d="M161.3 48.6A80 80 0 1 1 113.9 21.2"/>
-        <path class="post" d="M70 66v68M130 66v68"/>
-        <path class="cross" d="M70 100h60"/>
-        <circle class="led" cx="140" cy="30.7" r="11"/>
-      </svg>
-      <b>H<i>C</i>ORP</b>
-    </a>
+    <a class="name" href="#top">Hugo Bertagna</a>
     <nav id="menu">
       <a href="#about"      data-fr="À propos"   data-en="About">À propos</a>
       <a href="#experience" data-fr="Expérience" data-en="Experience">Expérience</a>
@@ -357,12 +278,12 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13.5px;colo
       <a href="#contact"    data-fr="Contact"    data-en="Contact">Contact</a>
     </nav>
     <div class="tools">
-      <button class="icon-btn" id="lang" type="button" aria-label="Switch to English">EN</button>
-      <button class="icon-btn" id="theme" type="button" aria-label="Basculer le thème">
+      <button class="tbtn" id="lang" type="button" aria-label="Switch to English">EN</button>
+      <button class="tbtn" id="theme" type="button" aria-label="Basculer le thème">
         <svg id="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       </button>
-      <button class="icon-btn burger" id="burger" type="button" aria-label="Menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <button class="tbtn burger" id="burger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
       </button>
     </div>
   </div>
@@ -372,220 +293,189 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13.5px;colo
 
   <!-- ══ HERO ══ -->
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="pill">
-          <span class="dot" aria-hidden="true"></span>
-          <span data-fr="Alternance en cours · Orange Business" data-en="Currently apprenticing · Orange Business">Alternance en cours · Orange Business</span>
-        </span>
-        <h1>Hugo<br>Bertagna</h1>
-        <p class="role" data-fr="Élève ingénieur en <strong>cybersécurité &amp; informatique</strong> à CPE Lyon. Je conçois des réseaux d’entreprise, je les sécurise, et je casse ce qui doit l’être."
-                         data-en="Cybersecurity &amp; computer science <strong>engineering student</strong> at CPE Lyon. I design enterprise networks, secure them, and break what needs breaking.">
-          Élève ingénieur en <strong>cybersécurité &amp; informatique</strong> à CPE Lyon. Je conçois des réseaux d’entreprise, je les sécurise, et je casse ce qui doit l’être.
-        </p>
-        <div class="meta">
-          <span><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Lyon, France</span>
-          <span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>hugo.bertagna@cpe.fr</span>
-          <span><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>+33 6 02 31 18 19</span>
-        </div>
-        <div class="cta">
-          <a class="btn btn-primary" href="assets/Hugo_Bertagna_Resume.pdf" download>
-            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg>
-            <span data-fr="Télécharger le CV" data-en="Download résumé">Télécharger le CV</span>
-          </a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/hugo-bertagna" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4"/></svg>
-            LinkedIn
-          </a>
-          <a class="btn btn-ghost" href="https://github.com/hugobertagna" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-1-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8a5 5 0 0 0-.1-3.7s-1.2-.3-4 1.5a13.4 13.4 0 0 0-7 0C6.1.8 4.9 1.1 4.9 1.1A5 5 0 0 0 4.8 4.8 5.4 5.4 0 0 0 3.3 8.6c0 5.5 3.3 6.7 6.4 7a3.4 3.4 0 0 0-1 2.6V22"/></svg>
-            GitHub
-          </a>
-        </div>
+    <div class="wrap">
+      <span class="avail">
+        <i aria-hidden="true"></i>
+        <span data-fr="Alternance en cours — Orange Business" data-en="Currently apprenticing — Orange Business">Alternance en cours — Orange Business</span>
+      </span>
+      <h1>Hugo<br><em>Bertagna</em></h1>
+      <p class="lede" data-fr="Élève ingénieur en <strong>cybersécurité &amp; informatique</strong> à CPE Lyon. Je conçois des réseaux d’entreprise, je les sécurise, et je teste ce qui doit l’être."
+                      data-en="Cybersecurity &amp; computer science <strong>engineering student</strong> at CPE Lyon. I design enterprise networks, secure them, and test what needs testing.">
+        Élève ingénieur en <strong>cybersécurité &amp; informatique</strong> à CPE Lyon. Je conçois des réseaux d’entreprise, je les sécurise, et je teste ce qui doit l’être.
+      </p>
+      <div class="hero-foot">
+        <a class="btn" href="assets/Hugo_Bertagna_Resume.pdf" download>
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></svg>
+          <span data-fr="Télécharger le CV" data-en="Download résumé">Télécharger le CV</span>
+        </a>
+        <a class="link-u" href="mailto:h.bertagna118@gmail.com">h.bertagna118@gmail.com</a>
+        <a class="link-u" href="https://www.linkedin.com/in/hugo-bertagna" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="link-u" href="https://github.com/hugobertagna" target="_blank" rel="noopener">GitHub</a>
+        <span class="where">Lyon, France</span>
       </div>
-
-      <svg class="mark" viewBox="0 0 200 200" aria-hidden="true">
-        <circle class="halo" cx="100" cy="100" r="94"/>
-        <path class="ln" pathLength="1" style="--t:1.8s;--s:.1s" d="M161.3 48.6 A80 80 0 1 1 113.9 21.2"/>
-        <line class="ln thin" pathLength="1" style="--t:.6s;--s:1.5s" x1="164" y1="44" x2="172" y2="39"/>
-        <line class="ln thin" pathLength="1" style="--t:.6s;--s:1.5s" x1="112" y1="17" x2="111" y2="8"/>
-        <line class="ln" pathLength="1" style="--t:1s;--s:.6s" x1="70" y1="66" x2="70" y2="134"/>
-        <line class="ln" pathLength="1" style="--t:1s;--s:.75s" x1="130" y1="66" x2="130" y2="134"/>
-        <line class="ln blue" pathLength="1" style="--t:.9s;--s:1.15s" x1="70" y1="100" x2="130" y2="100"/>
-        <circle class="led" cx="140" cy="30.7" r="3.6"/>
-      </svg>
     </div>
   </section>
 
-  <!-- ══ STATS ══ -->
-  <div class="wrap rv">
-    <div class="stats">
-      <div><b data-fr="&lt;em&gt;1&lt;/em&gt;er" data-en="&lt;em&gt;1&lt;/em&gt;st"><em>1</em>er</b><small data-fr="IAThon IBM × EDF" data-en="IAThon IBM × EDF">IAThon IBM × EDF</small></div>
-      <div><b data-fr="&lt;em&gt;3&lt;/em&gt;e" data-en="&lt;em&gt;3&lt;/em&gt;rd"><em>3</em>e</b><small data-fr="WocsHack Bug Bounty" data-en="WocsHack bug bounty">WocsHack Bug Bounty</small></div>
-      <div><b><em>5</em></b><small data-fr="Devs encadrés · Roverba" data-en="Devs led · Roverba">Devs encadrés · Roverba</small></div>
-      <div><b><em>3</em></b><small data-fr="Langues · FR / EN / DE" data-en="Languages · FR / EN / DE">Langues · FR / EN / DE</small></div>
+  <!-- ══ CHIFFRES ══ -->
+  <section>
+    <div class="wrap figures rv">
+      <div>
+        <b data-fr="1re place" data-en="1st place">1re place</b>
+        <small data-fr="IAThon IBM × EDF — agents IA autonomes, mars 2026" data-en="IAThon IBM × EDF — autonomous AI agents, March 2026">IAThon IBM × EDF — agents IA autonomes, mars 2026</small>
+      </div>
+      <div>
+        <b data-fr="3e place" data-en="3rd place">3e place</b>
+        <small data-fr="WocsHack 2026 — bug bounty pédagogique" data-en="WocsHack 2026 — educational bug bounty">WocsHack 2026 — bug bounty pédagogique</small>
+      </div>
+      <div>
+        <b data-fr="5 devs" data-en="5 devs">5 devs</b>
+        <small data-fr="Équipe pilotée sur Roverba, plateforme de déploiement de VM" data-en="Team led on Roverba, a VM deployment platform">Équipe pilotée sur Roverba, plateforme de déploiement de VM</small>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ══ ABOUT ══ -->
+  <!-- ══ À PROPOS ══ -->
   <section id="about">
-    <div class="wrap">
-      <div class="sec-head rv"><span class="idx">01</span><h2 data-fr="À propos" data-en="About">À propos</h2><span class="bar"></span></div>
-      <div class="about rv">
+    <div class="wrap rv">
+      <span class="label" data-fr="À propos" data-en="About">À propos</span>
+      <div class="about">
         <div>
           <p data-fr="Je suis en cycle ingénieur cybersécurité &amp; informatique à CPE Lyon (titre CTI), en alternance chez Orange Business comme Client Solution Architect. Mon terrain : le réseau d’entreprise — BGP, SD-WAN, architecture — et tout ce qui le protège."
              data-en="I’m an engineering student in cybersecurity &amp; computer science at CPE Lyon (CTI-accredited), apprenticing at Orange Business as a Client Solution Architect. My ground: enterprise networking — BGP, SD-WAN, architecture — and everything that protects it.">
             Je suis en cycle ingénieur cybersécurité &amp; informatique à CPE Lyon (titre CTI), en alternance chez Orange Business comme Client Solution Architect. Mon terrain : le réseau d’entreprise — BGP, SD-WAN, architecture — et tout ce qui le protège.
           </p>
-          <p data-fr="Avant ça : un BTS CIEL (réseaux, cybersécurité, électronique) à l’ORT Lyon, un stage de recherche en Argentine sur la gouvernance cloud et la sécurité des LLM dans l’administration publique, et du support N2/N3 aux Hospices Civils de Lyon."
-             data-en="Before that: a two-year technical degree in networks, cybersecurity and electronics at ORT Lyon, a research internship in Argentina on cloud governance and LLM security for public administration, and N2/N3 support at Hospices Civils de Lyon.">
-            Avant ça : un BTS CIEL (réseaux, cybersécurité, électronique) à l’ORT Lyon, un stage de recherche en Argentine sur la gouvernance cloud et la sécurité des LLM dans l’administration publique, et du support N2/N3 aux Hospices Civils de Lyon.
+          <p data-fr="Avant ça : un diplôme de technicien supérieur en réseaux, cybersécurité et électronique à l’ORT Lyon, un stage de recherche en Argentine sur la gouvernance cloud et la sécurité des LLM dans l’administration publique, et du support N2/N3 aux Hospices Civils de Lyon."
+             data-en="Before that: an Advanced Technician’s Certificate in networks, cybersecurity and electronics at ORT Lyon, a research internship in Argentina on cloud governance and LLM security for public administration, and N2/N3 support at Hospices Civils de Lyon.">
+            Avant ça : un diplôme de technicien supérieur en réseaux, cybersécurité et électronique à l’ORT Lyon, un stage de recherche en Argentine sur la gouvernance cloud et la sécurité des LLM dans l’administration publique, et du support N2/N3 aux Hospices Civils de Lyon.
           </p>
-          <p data-fr="À côté, je monte des projets : plateformes de déploiement automatisé, agents IA autonomes, bug bounty. Hackathons gagnés, code livré."
-             data-en="On the side I ship projects: automated deployment platforms, autonomous AI agents, bug bounty. Hackathons won, code shipped.">
-            À côté, je monte des projets : plateformes de déploiement automatisé, agents IA autonomes, bug bounty. Hackathons gagnés, code livré.
+          <p data-fr="À côté, je monte des projets : plateformes de déploiement automatisé, agents IA autonomes, bug bounty."
+             data-en="On the side I ship projects: automated deployment platforms, autonomous AI agents, bug bounty.">
+            À côté, je monte des projets : plateformes de déploiement automatisé, agents IA autonomes, bug bounty.
           </p>
         </div>
-        <div class="focus">
-          <h3 data-fr="Ce que je fais" data-en="What I do">Ce que je fais</h3>
-          <ul>
-            <li data-fr="Architecture réseau — BGP, SD-WAN" data-en="Network architecture — BGP, SD-WAN">Architecture réseau — BGP, SD-WAN</li>
-            <li data-fr="Sécurité offensive — pentest, bug bounty" data-en="Offensive security — pentest, bug bounty">Sécurité offensive — pentest, bug bounty</li>
-            <li data-fr="Cloud &amp; gouvernance — conformité, souveraineté" data-en="Cloud &amp; governance — compliance, sovereignty">Cloud &amp; gouvernance — conformité, souveraineté</li>
-            <li data-fr="IA agentique — agents autonomes, outillage Python" data-en="Agentic AI — autonomous agents, Python tooling">IA agentique — agents autonomes, outillage Python</li>
-            <li data-fr="Dev &amp; infra — Python, PHP, Linux, Git" data-en="Dev &amp; infra — Python, PHP, Linux, Git">Dev &amp; infra — Python, PHP, Linux, Git</li>
-          </ul>
+        <div class="doing">
+          <div><span>01</span><p data-fr="Architecture réseau — BGP, SD-WAN" data-en="Network architecture — BGP, SD-WAN">Architecture réseau — BGP, SD-WAN</p></div>
+          <div><span>02</span><p data-fr="Sécurité offensive — pentest, bug bounty" data-en="Offensive security — pentest, bug bounty">Sécurité offensive — pentest, bug bounty</p></div>
+          <div><span>03</span><p data-fr="Cloud &amp; gouvernance — conformité, souveraineté" data-en="Cloud &amp; governance — compliance, sovereignty">Cloud &amp; gouvernance — conformité, souveraineté</p></div>
+          <div><span>04</span><p data-fr="IA agentique — agents autonomes, outillage Python" data-en="Agentic AI — autonomous agents, Python tooling">IA agentique — agents autonomes, outillage Python</p></div>
+          <div><span>05</span><p data-fr="Dev &amp; infra — Python, PHP, Linux, Git" data-en="Dev &amp; infra — Python, PHP, Linux, Git">Dev &amp; infra — Python, PHP, Linux, Git</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ EXPERIENCE ══ -->
+  <!-- ══ EXPÉRIENCE ══ -->
   <section id="experience">
-    <div class="wrap">
-      <div class="sec-head rv"><span class="idx">02</span><h2 data-fr="Expérience" data-en="Experience">Expérience</h2><span class="bar"></span></div>
-      <div class="tl">
+    <div class="wrap rv">
+      <span class="label" data-fr="Expérience" data-en="Experience">Expérience</span>
 
-        <article class="job now rv">
-          <div class="job-top">
-            <h3 data-fr="Client Solution Architect" data-en="Client Solution Architect">Client Solution Architect</h3>
-            <span class="org">Orange Business</span>
-            <span class="when" data-fr="Sept 2026 — Août 2028" data-en="Sept 2026 — Aug 2028">Sept 2026 — Août 2028</span>
-          </div>
-          <div class="where" data-fr="Alternance · France" data-en="Work-study · France">Alternance · France</div>
+      <article class="job">
+        <div class="when" data-fr="Sept 2026 — Août 2028" data-en="Sept 2026 — Aug 2028">Sept 2026 — Août 2028</div>
+        <div>
+          <h3>Client Solution Architect</h3>
+          <div class="org">Orange Business <span data-fr="· Alternance · France" data-en="· Work-study · France">· Alternance · France</span></div>
           <ul>
             <li data-fr="Conception et mise en œuvre de solutions de routage (BGP) pour les réseaux de grands comptes" data-en="Design and implementation of routing solutions (BGP) for large enterprise networks">Conception et mise en œuvre de solutions de routage (BGP) pour les réseaux de grands comptes</li>
             <li data-fr="Architecture et déploiement de solutions SD-WAN, de l’analyse du besoin à la proposition technique" data-en="SD-WAN architecture and deployment, from needs analysis to technical proposal">Architecture et déploiement de solutions SD-WAN, de l’analyse du besoin à la proposition technique</li>
             <li data-fr="Gestion du lab de démonstration utilisé pour présenter les solutions réseau aux clients" data-en="Ownership of the demo lab used to present network solutions to clients">Gestion du lab de démonstration utilisé pour présenter les solutions réseau aux clients</li>
             <li data-fr="Rythme une semaine école / une semaine entreprise, cours CPE appliqués à des projets clients réels" data-en="One week at school, one week in the company — CPE coursework applied to real client projects">Rythme une semaine école / une semaine entreprise, cours CPE appliqués à des projets clients réels</li>
           </ul>
-        </article>
+        </div>
+      </article>
 
-        <article class="job rv">
-          <div class="job-top">
-            <h3 data-fr="Stagiaire recherche — Architecture cloud &amp; cybersécurité" data-en="Research Intern — Cloud architecture &amp; cybersecurity">Stagiaire recherche — Architecture cloud &amp; cybersécurité</h3>
-            <span class="org">Universidad Nacional del Sur</span>
-            <span class="when" data-fr="Juin — Août 2026" data-en="June — Aug 2026">Juin — Août 2026</span>
-          </div>
-          <div class="where">Bahía Blanca, Argentina</div>
+      <article class="job">
+        <div class="when" data-fr="Juin — Août 2026" data-en="June — Aug 2026">Juin — Août 2026</div>
+        <div>
+          <h3 data-fr="Stagiaire recherche — Architecture cloud &amp; cybersécurité" data-en="Research Intern — Cloud architecture &amp; cybersecurity">Stagiaire recherche — Architecture cloud &amp; cybersécurité</h3>
+          <div class="org">Universidad Nacional del Sur <span>· Bahía Blanca, Argentina</span></div>
           <ul>
             <li data-fr="Gouvernance cloud : framework de politique de sécurité pour le cloud hybride (public/privé) en contexte gouvernemental" data-en="Cloud governance: security policy framework for hybrid (public/private) cloud in government settings">Gouvernance cloud : framework de politique de sécurité pour le cloud hybride (public/privé) en contexte gouvernemental</li>
             <li data-fr="Souveraineté des données : référentiels de conformité garantissant l’isolation des infrastructures critiques de l’État" data-en="Data sovereignty: compliance frameworks guaranteeing isolation of critical state infrastructures">Souveraineté des données : référentiels de conformité garantissant l’isolation des infrastructures critiques de l’État</li>
             <li data-fr="Sécurité IA : analyse des vecteurs d’attaque et architectures de confiance pour intégrer des LLM dans l’administration publique" data-en="AI security: attack-vector analysis and trust architectures for integrating LLMs into public administration">Sécurité IA : analyse des vecteurs d’attaque et architectures de confiance pour intégrer des LLM dans l’administration publique</li>
           </ul>
-        </article>
+        </div>
+      </article>
 
-        <article class="job rv">
-          <div class="job-top">
-            <h3 data-fr="Stagiaire support N2/N3" data-en="N2/N3 Support Intern">Stagiaire support N2/N3</h3>
-            <span class="org">Hospices Civils de Lyon</span>
-            <span class="when" data-fr="Juin — Août 2024" data-en="June — Aug 2024">Juin — Août 2024</span>
-          </div>
-          <div class="where">Lyon, France</div>
+      <article class="job">
+        <div class="when" data-fr="Juin — Août 2024" data-en="June — Aug 2024">Juin — Août 2024</div>
+        <div>
+          <h3 data-fr="Stagiaire support N2/N3" data-en="N2/N3 Support Intern">Stagiaire support N2/N3</h3>
+          <div class="org">Hospices Civils de Lyon <span>· Lyon, France</span></div>
           <ul>
             <li data-fr="Conception et test de fonctionnalités sur une application web React, au sein d’une équipe de dev" data-en="Designed and tested features on a React web application within a dev team">Conception et test de fonctionnalités sur une application web React, au sein d’une équipe de dev</li>
             <li data-fr="Correction de bugs front-end et optimisation du responsive mobile / desktop" data-en="Fixed front-end bugs and optimized responsiveness on mobile and desktop">Correction de bugs front-end et optimisation du responsive mobile / desktop</li>
             <li data-fr="Versioning sur dépôt distant et daily stand-ups en environnement Agile/Scrum" data-en="Remote-repo versioning and daily stand-ups in an Agile/Scrum environment">Versioning sur dépôt distant et daily stand-ups en environnement Agile/Scrum</li>
           </ul>
-        </article>
-
-        <article class="job rv">
-          <div class="job-top">
-            <h3 data-fr="Équipier polyvalent" data-en="Crew Member">Équipier polyvalent</h3>
-            <span class="org">McDonald’s</span>
-            <span class="when" data-fr="Juil–Août &amp; Oct–Déc 2025" data-en="Jul–Aug &amp; Oct–Dec 2025">Juil–Août &amp; Oct–Déc 2025</span>
-          </div>
-          <div class="where" data-fr="Job étudiant · France" data-en="Part-time during studies · France">Job étudiant · France</div>
-        </article>
-
-      </div>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- ══ PROJECTS ══ -->
+  <!-- ══ PROJETS ══ -->
   <section id="projects">
-    <div class="wrap">
-      <div class="sec-head rv"><span class="idx">03</span><h2 data-fr="Projets &amp; distinctions" data-en="Projects &amp; awards">Projets &amp; distinctions</h2><span class="bar"></span></div>
-      <div class="cards">
+    <div class="wrap rv">
+      <span class="label" data-fr="Projets &amp; distinctions" data-en="Projects &amp; awards">Projets &amp; distinctions</span>
+      <div class="projects">
 
-        <article class="card rv">
-          <span class="tag gold" data-fr="1re place · Mars 2026" data-en="1st place · March 2026">1re place · Mars 2026</span>
-          <h3>IAThon IBM × EDF</h3>
-          <p data-fr="Agents IA autonomes conçus et déployés pour résoudre des cas métier d’EDF. Outils Python sur mesure permettant aux agents d’interagir avec des systèmes externes, développés sur l’IDE BOB d’IBM en accès anticipé."
-             data-en="Autonomous AI agents designed and deployed to solve EDF business challenges. Custom Python tooling letting agents interact with external systems, built on IBM’s BOB IDE in early access.">
-            Agents IA autonomes conçus et déployés pour résoudre des cas métier d’EDF. Outils Python sur mesure permettant aux agents d’interagir avec des systèmes externes, développés sur l’IDE BOB d’IBM en accès anticipé.
-          </p>
-          <div class="stack"><span>Python</span><span>IBM BOB</span><span data-fr="Agents IA" data-en="AI agents">Agents IA</span></div>
+        <article class="proj">
+          <div class="meta">
+            <span class="award" data-fr="1re place" data-en="1st place">1re place</span>
+            <span data-fr="Mars 2026" data-en="March 2026">Mars 2026</span>
+          </div>
+          <div>
+            <h3>IAThon IBM × EDF</h3>
+            <p data-fr="Agents IA autonomes conçus et déployés pour résoudre des cas métier d’EDF. Outils Python sur mesure permettant aux agents d’interagir avec des systèmes externes, développés sur l’IDE BOB d’IBM en accès anticipé."
+               data-en="Autonomous AI agents designed and deployed to solve EDF business challenges. Custom Python tooling letting agents interact with external systems, built on IBM’s BOB IDE in early access.">
+              Agents IA autonomes conçus et déployés pour résoudre des cas métier d’EDF. Outils Python sur mesure permettant aux agents d’interagir avec des systèmes externes, développés sur l’IDE BOB d’IBM en accès anticipé.
+            </p>
+            <div class="stack"><span>Python</span><span>IBM BOB</span><span data-fr="Agents IA" data-en="AI agents">Agents IA</span></div>
+          </div>
         </article>
 
-        <article class="card rv">
-          <span class="tag gold" data-fr="3e place · Mars 2026" data-en="3rd place · March 2026">3e place · Mars 2026</span>
-          <h3 data-fr="WocsHack 2026 — Bug Bounty" data-en="WocsHack 2026 — Bug Bounty">WocsHack 2026 — Bug Bounty</h3>
-          <p data-fr="Avec deux camarades de CPE Lyon : audit et pentest d’une plateforme d’apprentissage en ligne, dans un cadre éthique et pédagogique."
-             data-en="With two CPE Lyon classmates: audit and pentest of an online learning platform, in an ethical and educational setting.">
-            Avec deux camarades de CPE Lyon : audit et pentest d’une plateforme d’apprentissage en ligne, dans un cadre éthique et pédagogique.
-          </p>
-          <div class="stack"><span>Pentest</span><span>Web</span><span data-fr="Sécurité offensive" data-en="Offensive security">Sécurité offensive</span></div>
+        <article class="proj">
+          <div class="meta">
+            <span class="award" data-fr="3e place" data-en="3rd place">3e place</span>
+            <span data-fr="Mars 2026" data-en="March 2026">Mars 2026</span>
+          </div>
+          <div>
+            <h3 data-fr="WocsHack 2026 — Bug bounty" data-en="WocsHack 2026 — Bug bounty">WocsHack 2026 — Bug bounty</h3>
+            <p data-fr="Avec deux camarades de CPE Lyon : audit et pentest d’une plateforme d’apprentissage en ligne, dans un cadre éthique et pédagogique."
+               data-en="With two CPE Lyon classmates: audit and pentest of an online learning platform, in an ethical and educational setting.">
+              Avec deux camarades de CPE Lyon : audit et pentest d’une plateforme d’apprentissage en ligne, dans un cadre éthique et pédagogique.
+            </p>
+            <div class="stack"><span>Pentest</span><span>Web</span><span data-fr="Sécurité offensive" data-en="Offensive security">Sécurité offensive</span></div>
+          </div>
         </article>
 
-        <article class="card rv">
-          <span class="tag" data-fr="Chef de projet" data-en="Project lead">Chef de projet</span>
-          <h3 data-fr="Roverba — Déploiement de VM automatisé" data-en="Roverba — Automated VM deployment">Roverba — Déploiement de VM automatisé</h3>
-          <p data-fr="Équipe de 5 développeurs pilotée pour construire une application web qui automatise le déploiement de VM. Back-end PHP configurant les accès SSH et RDP, authentification sécurisée et environnements conteneurisés : −95 % de risque inter-VM, −70 % de temps de déploiement manuel."
-             data-en="Led a team of 5 developers building a web app that automates VM deployment. PHP back-end configuring SSH and RDP access, secure authentication and containerized environments: −95% inter-VM risk, −70% manual deployment time.">
-            Équipe de 5 développeurs pilotée pour construire une application web qui automatise le déploiement de VM. Back-end PHP configurant les accès SSH et RDP, authentification sécurisée et environnements conteneurisés : −95 % de risque inter-VM, −70 % de temps de déploiement manuel.
-          </p>
-          <div class="stack"><span>PHP</span><span>SSH / RDP</span><span data-fr="Conteneurs" data-en="Containers">Conteneurs</span><span>Git</span></div>
-        </article>
-
-        <article class="card rv">
-          <span class="tag" data-fr="Développeur" data-en="Developer">Développeur</span>
-          <h3 data-fr="hcorp.si — Site personnel" data-en="hcorp.si — Personal site">hcorp.si — Site personnel</h3>
-          <p data-fr="Portfolio responsive conçu et développé de zéro : accessibilité, temps de chargement et design system maison. Déploiement continu depuis GitHub."
-             data-en="Responsive portfolio designed and built from scratch: accessibility, load time and an in-house design system. Continuous deployment from GitHub.">
-            Portfolio responsive conçu et développé de zéro : accessibilité, temps de chargement et design system maison. Déploiement continu depuis GitHub.
-          </p>
-          <div class="stack"><span>HTML / CSS</span><span>JavaScript</span><span>React</span></div>
-          <a class="link" href="https://github.com/hugobertagna/hcorp.si" target="_blank" rel="noopener">
-            <span data-fr="Voir le code" data-en="View the code">Voir le code</span>
-            <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </a>
+        <article class="proj">
+          <div class="meta">
+            <span class="award" data-fr="Chef de projet" data-en="Project lead">Chef de projet</span>
+            <span>Lyon</span>
+          </div>
+          <div>
+            <h3 data-fr="Roverba — Déploiement de VM automatisé" data-en="Roverba — Automated VM deployment">Roverba — Déploiement de VM automatisé</h3>
+            <p data-fr="Équipe de 5 développeurs pilotée pour construire une application web qui automatise le déploiement de VM. Back-end PHP configurant les accès SSH et RDP, authentification sécurisée et environnements conteneurisés : −95 % de risque inter-VM, −70 % de temps de déploiement manuel."
+               data-en="Led a team of 5 developers building a web app that automates VM deployment. PHP back-end configuring SSH and RDP access, secure authentication and containerized environments: −95% inter-VM risk, −70% manual deployment time.">
+              Équipe de 5 développeurs pilotée pour construire une application web qui automatise le déploiement de VM. Back-end PHP configurant les accès SSH et RDP, authentification sécurisée et environnements conteneurisés : −95 % de risque inter-VM, −70 % de temps de déploiement manuel.
+            </p>
+            <div class="stack"><span>PHP</span><span>SSH / RDP</span><span data-fr="Conteneurs" data-en="Containers">Conteneurs</span><span>Git</span></div>
+          </div>
         </article>
 
       </div>
     </div>
   </section>
 
-  <!-- ══ EDUCATION + SKILLS ══ -->
+  <!-- ══ FORMATION & COMPÉTENCES ══ -->
   <section id="education">
-    <div class="wrap">
-      <div class="sec-head rv"><span class="idx">04</span><h2 data-fr="Formation &amp; compétences" data-en="Education &amp; skills">Formation &amp; compétences</h2><span class="bar"></span></div>
+    <div class="wrap rv">
+      <span class="label" data-fr="Formation &amp; compétences" data-en="Education &amp; skills">Formation &amp; compétences</span>
       <div class="split">
 
-        <div class="edu rv">
+        <div class="edu">
           <article>
-            <h3>CPE Lyon — <span data-fr="École d’ingénieurs" data-en="Graduate School of Engineering">École d’ingénieurs</span></h3>
-            <div class="deg" data-fr="Diplôme d’ingénieur · Cybersécurité &amp; Informatique (titre CTI)" data-en="Engineering degree · Cybersecurity &amp; Computer Science (CTI-accredited)">Diplôme d’ingénieur · Cybersécurité &amp; Informatique (titre CTI)</div>
+            <h3>CPE Lyon</h3>
+            <div class="deg" data-fr="Diplôme d’ingénieur — Cybersécurité &amp; Informatique (titre CTI)" data-en="Engineering Degree — Cybersecurity &amp; Computer Science (CTI-accredited)">Diplôme d’ingénieur — Cybersécurité &amp; Informatique (titre CTI)</div>
             <div class="when" data-fr="Sept 2025 — Août 2028 · Villeurbanne" data-en="Sept 2025 — Aug 2028 · Villeurbanne">Sept 2025 — Août 2028 · Villeurbanne</div>
             <p data-fr="Filière d’excellence mêlant génie logiciel, cyberdéfense et architecture réseau. Cours : architecture réseau, systèmes d’exploitation, cyberdéfense, Python, C, Java, PHP. Projets : tests d’intrusion, réponse à incident, développement sécurisé."
                data-en="Excellence track combining software engineering, cyberdefense and network architecture. Coursework: network architecture, operating systems, cyberdefense, Python, C, Java, PHP. Projects: penetration testing, incident response, secure development.">
@@ -593,8 +483,8 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13.5px;colo
             </p>
           </article>
           <article>
-            <h3>ORT Lyon — BTS</h3>
-            <div class="deg" data-fr="Cybersécurité, Informatique &amp; Réseaux, Électronique — Option A : IR" data-en="Cybersecurity, IT &amp; Networks, Electronics — Option A: IT &amp; Networks">Cybersécurité, Informatique &amp; Réseaux, Électronique — Option A : IR</div>
+            <h3>ORT Lyon</h3>
+            <div class="deg" data-fr="Advanced Technician’s Certificate — Cybersécurité, Informatique &amp; Réseaux, Électronique (Option A : IR)" data-en="Advanced Technician’s Certificate — Cybersecurity, IT &amp; Networks, Electronics (Option A: IT &amp; Networks)">Advanced Technician’s Certificate — Cybersécurité, Informatique &amp; Réseaux, Électronique (Option A : IR)</div>
             <div class="when" data-fr="Sept 2023 — Août 2025 · Lyon" data-en="Sept 2023 — Aug 2025 · Lyon">Sept 2023 — Août 2025 · Lyon</div>
             <p data-fr="Programme intensif : administration réseau, cybersécurité et électronique embarquée. Déploiement, maintenance et sécurisation d’infrastructures IT et de systèmes industriels."
                data-en="Intensive program: network administration, cybersecurity and embedded electronics. Deployment, maintenance and hardening of IT infrastructures and industrial systems.">
@@ -603,34 +493,39 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13.5px;colo
           </article>
         </div>
 
-        <div class="skills rv">
+        <div class="skills">
           <div>
             <h3 data-fr="Développement &amp; scripting" data-en="Development &amp; scripting">Développement &amp; scripting</h3>
-            <div class="chips"><span>Python</span><span>C</span><span>Java</span><span>Bash</span><span>PHP</span><span>JavaScript</span><span>SQL</span></div>
+            <p>Python <span class="sep">/</span> C <span class="sep">/</span> Java <span class="sep">/</span> Bash <span class="sep">/</span> PHP <span class="sep">/</span> JavaScript <span class="sep">/</span> SQL</p>
           </div>
           <div>
             <h3 data-fr="Systèmes &amp; réseaux" data-en="Systems &amp; networks">Systèmes &amp; réseaux</h3>
-            <div class="chips"><span>AD/DS</span><span>DHCP/DNS</span><span>Cisco</span><span>BGP</span><span>SD-WAN</span><span>Linux</span><span data-fr="Sécurité réseau" data-en="Network security">Sécurité réseau</span><span>Git</span><span data-fr="Virtualisation" data-en="Virtualization">Virtualisation</span></div>
+            <p data-fr="AD/DS <span class=&quot;sep&quot;>/</span> DHCP/DNS <span class=&quot;sep&quot;>/</span> Cisco <span class=&quot;sep&quot;>/</span> BGP <span class=&quot;sep&quot;>/</span> SD-WAN <span class=&quot;sep&quot;>/</span> Linux <span class=&quot;sep&quot;>/</span> Sécurité réseau <span class=&quot;sep&quot;>/</span> Git <span class=&quot;sep&quot;>/</span> Virtualisation"
+               data-en="AD/DS <span class=&quot;sep&quot;>/</span> DHCP/DNS <span class=&quot;sep&quot;>/</span> Cisco <span class=&quot;sep&quot;>/</span> BGP <span class=&quot;sep&quot;>/</span> SD-WAN <span class=&quot;sep&quot;>/</span> Linux <span class=&quot;sep&quot;>/</span> Network security <span class=&quot;sep&quot;>/</span> Git <span class=&quot;sep&quot;>/</span> Virtualization">
+              AD/DS <span class="sep">/</span> DHCP/DNS <span class="sep">/</span> Cisco <span class="sep">/</span> BGP <span class="sep">/</span> SD-WAN <span class="sep">/</span> Linux <span class="sep">/</span> Sécurité réseau <span class="sep">/</span> Git <span class="sep">/</span> Virtualisation
+            </p>
           </div>
           <div>
             <h3 data-fr="Langues" data-en="Languages">Langues</h3>
-            <div class="langs">
-              <div class="lang"><span data-fr="Français" data-en="French">Français</span><span class="track"><i class="fill" style="--w:100%"></i></span><span class="lvl" data-fr="Natif" data-en="Native">Natif</span></div>
-              <div class="lang"><span data-fr="Anglais" data-en="English">Anglais</span><span class="track"><i class="fill" style="--w:88%"></i></span><span class="lvl">C1</span></div>
-              <div class="lang"><span data-fr="Allemand" data-en="German">Allemand</span><span class="track"><i class="fill" style="--w:68%"></i></span><span class="lvl">B2</span></div>
-            </div>
+            <p data-fr="Français — natif <span class=&quot;sep&quot;>/</span> Anglais — C1 <span class=&quot;sep&quot;>/</span> Allemand — B2"
+               data-en="French — native <span class=&quot;sep&quot;>/</span> English — C1 <span class=&quot;sep&quot;>/</span> German — B2">
+              Français — natif <span class="sep">/</span> Anglais — C1 <span class="sep">/</span> Allemand — B2
+            </p>
           </div>
           <div>
             <h3 data-fr="Certifications" data-en="Certifications">Certifications</h3>
             <ul class="certs">
-              <li><svg viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></svg><span data-fr="Cisco — Introduction to Cybersecurity" data-en="Cisco — Introduction to Cybersecurity">Cisco — Introduction to Cybersecurity</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></svg><span data-fr="Red Hat System Administration I &amp; II (RH134)" data-en="Red Hat System Administration I &amp; II (RH134)">Red Hat System Administration I &amp; II (RH134)</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></svg><span data-fr="Permis B" data-en="Driver’s licence (B)">Permis B</span></li>
+              <li>Cisco — Introduction to Cybersecurity</li>
+              <li>Red Hat System Administration I &amp; II (RH134)</li>
+              <li data-fr="Permis B" data-en="Driver’s licence (B)">Permis B</li>
             </ul>
           </div>
           <div>
             <h3 data-fr="Centres d’intérêt" data-en="Interests">Centres d’intérêt</h3>
-            <div class="chips"><span>Hackathons</span><span data-fr="Entrepreneuriat" data-en="Entrepreneurship">Entrepreneuriat</span><span data-fr="IA agentique" data-en="Agentic AI">IA agentique</span><span>Volley-ball</span><span data-fr="Cinéma" data-en="Cinema">Cinéma</span></div>
+            <p data-fr="Hackathons <span class=&quot;sep&quot;>/</span> Entrepreneuriat <span class=&quot;sep&quot;>/</span> IA agentique <span class=&quot;sep&quot;>/</span> Volley-ball <span class=&quot;sep&quot;>/</span> Cinéma"
+               data-en="Hackathons <span class=&quot;sep&quot;>/</span> Entrepreneurship <span class=&quot;sep&quot;>/</span> Agentic AI <span class=&quot;sep&quot;>/</span> Volleyball <span class=&quot;sep&quot;>/</span> Cinema">
+              Hackathons <span class="sep">/</span> Entrepreneuriat <span class="sep">/</span> IA agentique <span class="sep">/</span> Volley-ball <span class="sep">/</span> Cinéma
+            </p>
           </div>
         </div>
 
@@ -641,24 +536,18 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13.5px;colo
   <!-- ══ CONTACT ══ -->
   <section id="contact" class="contact">
     <div class="wrap rv">
-      <h2 data-fr="On construit quelque chose ?" data-en="Let’s build something.">On construit quelque chose ?</h2>
+      <h2 data-fr="On construit <em>quelque chose</em> ?" data-en="Let’s build <em>something</em>.">On construit <em>quelque chose</em> ?</h2>
       <p data-fr="Ouvert aux projets, aux missions et aux discussions techniques — réseau, sécurité offensive ou IA agentique."
          data-en="Open to projects, missions and technical conversations — networking, offensive security or agentic AI.">
         Ouvert aux projets, aux missions et aux discussions techniques — réseau, sécurité offensive ou IA agentique.
       </p>
-      <div class="cta">
-        <a class="btn btn-primary" href="mailto:hugo.bertagna@cpe.fr">
-          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          hugo.bertagna@cpe.fr
-        </a>
-        <a class="btn btn-ghost" href="mailto:contact@hcorp.si">contact@hcorp.si</a>
-      </div>
+      <a class="mail" href="mailto:h.bertagna118@gmail.com">h.bertagna118@gmail.com</a>
     </div>
   </section>
 
   <footer>
-    <div class="wrap foot-row">
-      <span>© <span id="yr">2026</span> Hugo Bertagna — HCorp</span>
+    <div class="wrap foot">
+      <span>© <span id="yr">2026</span> Hugo Bertagna</span>
       <span class="foot-links">
         <a href="https://www.linkedin.com/in/hugo-bertagna" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/hugobertagna" target="_blank" rel="noopener">GitHub</a>
@@ -673,30 +562,27 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13.5px;colo
   var root = document.documentElement;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ── année ── */
   document.getElementById('yr').textContent = new Date().getFullYear();
 
   /* ── thème ── */
-  var sun = 'M12 4V2M12 22v-2M5 5 3.6 3.6M20.4 20.4 19 19M4 12H2M22 12h-2M5 19l-1.4 1.4M20.4 3.6 19 5';
-  var moon = 'M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z';
+  var moon = '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+  var sun  = '<circle cx="12" cy="12" r="4"/><path d="M12 4V2M12 22v-2M5 5 3.6 3.6M20.4 20.4 19 19M4 12H2M22 12h-2M5 19l-1.4 1.4M20.4 3.6 19 5"/>';
   var icon = document.getElementById('theme-icon');
   function paint(mode){
     var dark = mode === 'dark';
-    icon.innerHTML = '<path d="' + (dark ? sun : moon) + '"/>';
-    if (dark) icon.querySelector('path').insertAdjacentHTML('afterend','<circle cx="12" cy="12" r="4"/>');
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', dark ? '#0A0E16' : '#F6F8FB');
+    icon.innerHTML = dark ? sun : moon;
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', dark ? '#121316' : '#FCFBF9');
   }
   var saved = null;
-  try { saved = localStorage.getItem('hc-theme'); } catch(e){}
-  var startDark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  try { saved = localStorage.getItem('hb-theme'); } catch(e){}
   if (saved) root.setAttribute('data-theme', saved);
-  paint(startDark ? 'dark' : 'light');
+  paint((saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')));
   document.getElementById('theme').addEventListener('click', function(){
-    var dark = !(root.getAttribute('data-theme') === 'dark' ||
-                (!root.hasAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches));
-    var mode = dark ? 'dark' : 'light';
+    var isDark = root.getAttribute('data-theme') === 'dark' ||
+                 (!root.hasAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var mode = isDark ? 'light' : 'dark';
     root.setAttribute('data-theme', mode);
-    try { localStorage.setItem('hc-theme', mode); } catch(e){}
+    try { localStorage.setItem('hb-theme', mode); } catch(e){}
     paint(mode);
   });
 
@@ -710,14 +596,14 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13.5px;colo
     root.lang = lang;
     btn.textContent = lang === 'fr' ? 'EN' : 'FR';
     btn.setAttribute('aria-label', lang === 'fr' ? 'Switch to English' : 'Passer en français');
-    try { localStorage.setItem('hc-lang', lang); } catch(e){}
+    try { localStorage.setItem('hb-lang', lang); } catch(e){}
   }
   var lang = 'fr';
-  try { lang = localStorage.getItem('hc-lang') || 'fr'; } catch(e){}
+  try { lang = localStorage.getItem('hb-lang') || 'fr'; } catch(e){}
   if (lang !== 'fr') setLang(lang); else btn.textContent = 'EN';
   btn.addEventListener('click', function(){ setLang(root.lang === 'fr' ? 'en' : 'fr'); });
 
-  /* ── header + menu mobile ── */
+  /* ── menu mobile ── */
   var hdr = document.getElementById('hdr');
   var burger = document.getElementById('burger');
   burger.addEventListener('click', function(){
@@ -728,12 +614,12 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13.5px;colo
     if (e.target.tagName === 'A'){ hdr.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
   });
 
-  /* ── scroll : header collé + nav active ── */
+  /* ── header + nav active ── */
   var links = Array.prototype.slice.call(document.querySelectorAll('#menu a'));
   var targets = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
   function onScroll(){
     hdr.classList.toggle('stuck', window.scrollY > 8);
-    var y = window.scrollY + 140, current = -1;
+    var y = window.scrollY + 150, current = -1;
     targets.forEach(function(t,i){ if (t && t.offsetTop <= y) current = i; });
     links.forEach(function(a,i){ a.classList.toggle('active', i === current); });
   }
@@ -746,17 +632,10 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13.5px;colo
       entries.forEach(function(en){
         if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
       });
-    }, {rootMargin:'0px 0px -8% 0px', threshold:.12});
+    }, {rootMargin:'0px 0px -6% 0px', threshold:.08});
     document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
-
-    var lio = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if (en.isIntersecting){ en.target.classList.add('in'); lio.unobserve(en.target); }
-      });
-    }, {threshold:.6});
-    document.querySelectorAll('.lang').forEach(function(el){ lio.observe(el); });
   } else {
-    document.querySelectorAll('.rv,.lang').forEach(function(el){ el.classList.add('in'); });
+    document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); });
   }
 })();
 </script>
