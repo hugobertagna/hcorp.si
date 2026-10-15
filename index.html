@@ -163,6 +163,17 @@ section{padding-block:clamp(70px,11vh,130px);position:relative}
   border-left:1px solid var(--acid);padding-left:18px;
 }
 .hero .claim b{font-weight:500}
+.cvfab{
+  position:fixed;right:var(--pad);bottom:var(--pad);z-index:45;
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  background:var(--acid);color:#0B0B0C;border:1px solid var(--acid);padding:12px 16px;
+  box-shadow:0 10px 30px -14px rgba(216,255,61,.6);
+  transition:background .2s,color .2s,transform .2s;
+}
+.cvfab:hover{background:transparent;color:var(--acid);transform:translateY(-2px)}
+.cvfab.hide{opacity:0;transform:translateY(12px);pointer-events:none}
+.cvfab svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .hero .edge{
   position:absolute;left:var(--pad);bottom:clamp(26px,6vh,54px);
   writing-mode:vertical-rl;transform:rotate(180deg);
@@ -219,8 +230,18 @@ section{padding-block:clamp(70px,11vh,130px);position:relative}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:13px}
 .tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
   border:1px solid var(--line);padding:4px 9px;color:var(--dim);transition:color .35s,border-color .35s}
-.rows .row:nth-child(2){margin-left:clamp(14px,7vw,110px)}
-.rows .row:nth-child(3){margin-left:clamp(28px,14vw,220px)}
+.rows .row:nth-child(even){grid-template-columns:auto minmax(0,1fr)}
+.rows .row:nth-child(even) h3{grid-column:2;text-align:right}
+.rows .row:nth-child(even) .meta{grid-column:1;text-align:left}
+.rows .row:nth-child(even) .body{margin-left:auto;text-align:right}
+.rows .row:nth-child(even) .tags{justify-content:flex-end}
+.rows .row:nth-child(even) .ghost{right:auto;left:-.02em}
+.rows .row:nth-child(even):hover{transform:translateX(-12px)}
+.row .logo{width:clamp(26px,3.4vw,44px);height:auto;vertical-align:-.12em;margin-right:.3em}
+.row .out{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  border-bottom:1px solid currentColor;padding-bottom:2px;display:inline-block;margin-top:14px;
+}
 
 /* ── profil en collage ── */
 .collage{position:relative;display:grid;grid-template-columns:repeat(12,1fr);gap:0 clamp(12px,2vw,26px)}
@@ -291,12 +312,16 @@ footer{border-top:1px solid var(--line);padding:20px var(--pad)}
   .rail{display:none}
   .hero .echo,.hero .edge{display:none}
   .hero .n2,.hero .claim{margin-left:0}
-  .hero .sticker{top:auto;bottom:clamp(14px,5vh,40px);right:var(--pad)}
+  .hero .sticker{top:auto;bottom:clamp(70px,12vh,110px);right:var(--pad)}
+  .cvfab{padding:10px 13px}
   .tickwrap{transform:rotate(-1.6deg)}
   .mark{position:static;writing-mode:horizontal-tb;margin-bottom:18px;display:block}
   .inner{padding-left:0;padding-right:0}
-  .rows .row:nth-child(2),.rows .row:nth-child(3){margin-left:0}
-  .row{grid-template-columns:1fr}
+  .row,.rows .row:nth-child(even){grid-template-columns:1fr}
+  .rows .row:nth-child(even) h3,.rows .row:nth-child(even) .meta,
+  .rows .row:nth-child(even) .body{grid-column:1;text-align:left;margin-left:0}
+  .rows .row:nth-child(even) .tags{justify-content:flex-start}
+  .rows .row:nth-child(even):hover{transform:translateX(12px)}
   .row .meta{white-space:normal;padding-bottom:0}
   .row .ghost{font-size:clamp(70px,22vw,130px)}
   .statement{grid-column:1/13;transform:none}
@@ -333,9 +358,13 @@ footer{border-top:1px solid var(--line);padding:20px var(--pad)}
 <div class="tr">
   <a class="mbtn" href="#work" data-fr="Travaux" data-en="Work">Travaux</a>
   <a class="mbtn" href="#about" data-fr="À propos" data-en="About">À propos</a>
-  <a class="mbtn" href="assets/Hugo_Bertagna_Resume.pdf" download>CV</a>
   <button class="mbtn" id="lang" type="button" aria-label="Switch to English">EN</button>
 </div>
+
+<a class="cvfab" href="assets/Hugo_Bertagna_Resume.pdf" download>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></svg>
+  <span data-fr="Télécharger mon CV" data-en="Download my résumé">Télécharger mon CV</span>
+</a>
 
 <nav class="rail" id="rail" aria-label="Sections">
   <a href="#work" data-fr="01 Travaux" data-en="01 Work">01 Travaux</a>
@@ -386,6 +415,20 @@ footer{border-top:1px solid var(--line);padding:20px var(--pad)}
 
         <article class="row rv">
           <span class="ghost" aria-hidden="true">01</span>
+          <h3><img class="logo" src="assets/delest-logo.svg" alt="" width="24" height="24" loading="lazy">Délest</h3>
+          <span class="meta" data-fr="APPLI WINDOWS — BÊTA 0.1.0" data-en="WINDOWS APP — BETA 0.1.0">APPLI WINDOWS — BÊTA 0.1.0</span>
+          <div class="body">
+            <p data-fr="Application de bureau que j’ai conçue et développée pour Windows 10/11 : elle scanne tout le disque et montre enfin où part l’espace. Les 233 Go analysés sont triés par raison — gros fichiers, dépendances de dev, caches et temporaires, installateurs, doublons — avec une carte visuelle des dossiers, un détecteur de doublons et un marquage « sans risque ». Rien n’est supprimé sans confirmation explicite, et tout tourne hors ligne, sans compte."
+               data-en="Desktop app I designed and built for Windows 10/11: it scans the whole drive and finally shows where the space went. Everything it finds is sorted by reason — large files, dev dependencies, caches and temp data, installers, duplicates — with a visual folder map, a duplicate finder and a “safe to delete” marker. Nothing is removed without explicit confirmation, and it all runs offline, no account.">
+              Application de bureau que j’ai conçue et développée pour Windows 10/11 : elle scanne tout le disque et montre enfin où part l’espace. Les 233 Go analysés sont triés par raison — gros fichiers, dépendances de dev, caches et temporaires, installateurs, doublons — avec une carte visuelle des dossiers, un détecteur de doublons et un marquage « sans risque ». Rien n’est supprimé sans confirmation explicite, et tout tourne hors ligne, sans compte.
+            </p>
+            <div class="tags"><span class="tag">Windows</span><span class="tag" data-fr="Appli bureau" data-en="Desktop app">Appli bureau</span><span class="tag" data-fr="Analyse disque" data-en="Disk analysis">Analyse disque</span><span class="tag" data-fr="Produit &amp; UX" data-en="Product &amp; UX">Produit &amp; UX</span></div>
+            <a class="out" href="https://delest-one.vercel.app/" target="_blank" rel="noopener">delest-one.vercel.app ↗</a>
+          </div>
+        </article>
+
+        <article class="row rv">
+          <span class="ghost" aria-hidden="true">02</span>
           <h3>IAThon IBM × EDF</h3>
           <span class="meta" data-fr="1RE PLACE — MARS 2026" data-en="1ST PLACE — MARCH 2026">1RE PLACE — MARS 2026</span>
           <div class="body">
@@ -398,7 +441,7 @@ footer{border-top:1px solid var(--line);padding:20px var(--pad)}
         </article>
 
         <article class="row rv">
-          <span class="ghost" aria-hidden="true">02</span>
+          <span class="ghost" aria-hidden="true">03</span>
           <h3>WocsHack 2026</h3>
           <span class="meta" data-fr="3E PLACE — BUG BOUNTY" data-en="3RD PLACE — BUG BOUNTY">3E PLACE — BUG BOUNTY</span>
           <div class="body">
@@ -411,7 +454,7 @@ footer{border-top:1px solid var(--line);padding:20px var(--pad)}
         </article>
 
         <article class="row rv">
-          <span class="ghost" aria-hidden="true">03</span>
+          <span class="ghost" aria-hidden="true">04</span>
           <h3>Roverba</h3>
           <span class="meta" data-fr="CHEF DE PROJET — 5 DEVS" data-en="PROJECT LEAD — 5 DEVS">CHEF DE PROJET — 5 DEVS</span>
           <div class="body">
@@ -635,6 +678,14 @@ footer{border-top:1px solid var(--line);padding:20px var(--pad)}
     if (document.hidden) cancelAnimationFrame(raf);
     else if (!reduce) raf = requestAnimationFrame(draw);
   });
+
+  /* ── le bouton CV s'efface sur le pied de page ── */
+  var fab = document.querySelector('.cvfab'), foot = document.querySelector('footer');
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){
+      fab.classList.toggle('hide', es[0].isIntersecting);
+    }, {threshold:.05}).observe(foot);
+  }
 
   /* ── rail : section courante ── */
   var railLinks = Array.prototype.slice.call(document.querySelectorAll('#rail a'));
